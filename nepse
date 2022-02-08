@@ -3,7 +3,6 @@ query=$(printf '%s' "$*")
 if test -z "$query" 
 then
       echo "STOCK_SYMBOL MISSING!"
-
 else
 webpage=$(curl -s "https://merolagani.com/CompanyDetail.aspx?symbol=$query")
 price=$(echo $webpage | pup 'span#ctl00_ContentPlaceHolder1_CompanyDetail1_lblMarketPrice text{}')
