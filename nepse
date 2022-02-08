@@ -1,0 +1,7 @@
+#! /bin/sh
+query=$(printf '%s' "$*")
+webpage=$(curl -s "https://merolagani.com/CompanyDetail.aspx?symbol=$query")
+price=$(echo $webpage | pup 'span#ctl00_ContentPlaceHolder1_CompanyDetail1_lblMarketPrice text{}')
+company=$(echo $webpage | pup 'span#ctl00_ContentPlaceHolder1_CompanyDetail1_companyName text{}')
+echo The current price of $company is Nrs.$price	
+
