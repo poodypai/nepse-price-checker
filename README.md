@@ -1,7 +1,7 @@
 # Nepse Price Checker
 ---
 Check Prices of Stock Listed in Nepal Stock Exchange using Terminal
-(images/ArcoLinux-2022-02-11-1644546474_screenshot_1366x768.png)
+![screenshot](images/ArcoLinux-2022-02-11-1644546474_screenshot_1366x768.png)
 ## Installation
 ### cURL
 ```sh
