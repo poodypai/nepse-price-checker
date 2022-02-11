@@ -7,6 +7,6 @@ else
 webpage=$(curl -s "https://merolagani.com/CompanyDetail.aspx?symbol=$query")
 price=$(echo $webpage | pup 'span#ctl00_ContentPlaceHolder1_CompanyDetail1_lblMarketPrice text{}')
 company=$(echo $webpage | pup 'span#ctl00_ContentPlaceHolder1_CompanyDetail1_companyName text{}')
-echo "The current price of $company is Nrs.$price"	
-fi
 
+if [ -z "$company" ]; then echo "Error! Wrong Stock Symbol Entered."; else echo "The current price of $company is Nrs.$price"; fi   
+fi
